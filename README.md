@@ -5,5 +5,5 @@ This is going to use the GIC-400 Interrupt Controller but I might extend this to
 
 ## Sources
 
-https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
-https://developer.arm.com/documentation/ddi0471/b/?lang=en
+- https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf
+- https://developer.arm.com/documentation/ddi0471/b/?lang=en
