@@ -45,3 +45,36 @@
 @ GPIO Level OFFSETS (Read Only)
 .equ    GPLEV0, 0x34    @ Check level of pins 0-31 (31:0)
 .equ    GPLEV1, 0x38    @ Check level of pins 32-57 (25:0), 31:26 reserved
+
+@ GPIO Pin Event Detect Status OFFSETS
+.equ    GPEDS0, 0x40    @ Event detected on pins 0-31 (31:0)
+.equ    GPEDS1, 0x44    @ Event detected on pins 32-57 (25:0), 31:26 reserved
+    @ Write 1 to any bit to clear Status
+
+@ GPIO Pin Rising Edge Detect Enable OFFSETS
+.equ    GPREN0, 0x4C    @ Rising edge enabled on pins 0-31 (31:0)
+.equ    GPREN1, 0x50    @ Rising edge enabled on pins 32_57 (25:0), 31:26 reserved
+    @ This is a synchronous Rising Edge detect
+
+@ GPIO Pin Falling Edge Detect Enable OFFSETS
+.equ    GPFEN0, 0x58    @ Falling edge enabled on pins 0-31 (31:0)
+.equ    GPFEN1, 0x5C    @ Falling edge enabled on pins 32-57 (25:0), 31:26 reserved
+    @ This is a synchronous Falling Edge detect
+
+@ GPIO Pin High Detect Enable OFFSETS
+.equ    GPHEN0, 0x64    @ High detect enable on pins 0-31 (31:0)
+.equ    GPHEN1, 0x68    @ High detect enable on pins 32-57 (25:0), 31:26 reserved
+
+@ GPIO Pin Low Detect Enable OFFSETS
+.equ    GPLEN0, 0x70    @ Low detect enable on pins 0-31 (31:0)
+.equ    GPLEN1, 0x74    @ Low detect enable on pins 32-57 (25:0), 31:26 reserved
+
+@ GPIO Pin Async. Rising Edge Detect OFFSETS
+.equ    GPAREN0, 0x7C   @ Rising edge enabled on pins 0-31 (31:0)
+.equ    GPAREN1, 0x80   @ Rising edge enabled on pins 32_57 (25:0), 31:26 reserved
+    @ This is an asynchronous Rising Edge detect
+
+@ GPIO Pin Async. Falling Edge Detect OFFSETS
+.equ    GPAFEN0, 0x88   @ Falling edge enabled on pins 0-31 (31:0)
+.equ    GPAFEN1, 0x8C   @ Falling edge enabled on pins 32-57 (25:0), 31:26 reserved
+    @ This is an asynchronous Falling Edge detect
