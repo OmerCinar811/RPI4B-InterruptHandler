@@ -22,3 +22,16 @@ Addresses
         VC section is 0x0_4000_0000 downwards
 
     Software accessing peripherals use 32-bit legacy addresses
+
+GPIO
+    gpio peripheral has 4 total interrupt lines
+    gpio event registers can be used to enable different types of events
+        events will set bits in the event detect registers
+        Types of events:
+            rising edge (sync)
+            falling edge (sync)
+            high level
+            low level
+            rising edge (async)
+            falling edge (async)
+    
