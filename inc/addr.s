@@ -30,6 +30,18 @@
 .equ    GPCLR0, 0x28    @ Clear Pins 0-31 (31:0)
 .equ    GPCLR1, 0x2C    @ Set Pins 32-57 (25:0), 31:26 reserved
 
+@ GPIO Pull-up/Pull-Down OFFSETS
+.equ    GPIO_PUP_PDN_CNTRL_REG0, 0xE4   @ Pins 15 - 0, (31:0)
+.equ    GPIO_PUP_PDN_CNTRL_REG1, 0xE8   @ Pins 31 - 16, (31:0)
+.equ    GPIO_PUP_PDN_CNTRL_REG2, 0xEC   @ Pins 47 - 32, (31:0)
+.equ    GPIO_PUP_PDN_CNTRL_REG3, 0xF0   @ Pins 57 - 48, (19:0), 31:20 are reserved
+
+    @ Resistor Select for Pin XX
+    @ 00 = No resistor is selected
+    @ 01 = Pull up resistor is selected
+    @ 10 = Pull down resistor is selected
+    @ 11 = Reserved
+
 @ GPIO Level OFFSETS (Read Only)
 .equ    GPLEV0, 0x34    @ Check level of pins 0-31 (31:0)
 .equ    GPLEV1, 0x38    @ Check level of pins 32-57 (25:0), 31:26 reserved
