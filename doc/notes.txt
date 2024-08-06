@@ -1,0 +1,24 @@
+Raspberry PI4B
+
+Chip:
+    CPU: BCM2711
+        Quad-core CPU. ARM A72 (ARM V8), 64-bit 1.5GHZ
+        32kb data + 48kb instruction L1 cache per core
+    GPU: VideoCore VI
+        32-bit GPU
+
+Addresses
+    1. issued as virtual addresses by arm core
+    2. mapped into a physical address by the arm mmu
+    3. used to select appropriate peripheral or location in RAM
+
+    Full 35-bit address map (maps to 4gb of ram)
+        seen by large address masters. (DMA4 engines, ARM CPU)
+    two l2 cache alias (one allocating, one non-allocating) which cache only first 1gb of SDRAM
+
+    Physical Addresses
+        start at 0x0_0000_0000
+        ARM section starts at 0x0_0000_0000 and extends up to size of installed sdram
+        VC section is 0x0_4000_0000 downwards
+
+    Software accessing peripherals use 32-bit legacy addresses
