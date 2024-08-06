@@ -24,3 +24,12 @@
     @ 011 = GPIO Pin XX takes alternate function 4
     @ 010 = GPIO Pin XX takes alternate function 5
 
+@ GPIO Set/Clear OFFSETS (Write Only)
+.equ    GPSET0, 0x1C    @ Set Pins 0-31 (31:0)
+.equ    GPSET1, 0x20    @ Set Pins 32-57 (25:0), 31:26 reserved
+.equ    GPCLR0, 0x28    @ Clear Pins 0-31 (31:0)
+.equ    GPCLR1, 0x2C    @ Set Pins 32-57 (25:0), 31:26 reserved
+
+@ GPIO Level OFFSETS (Read Only)
+.equ    GPLEV0, 0x34    @ Check level of pins 0-31 (31:0)
+.equ    GPLEV1, 0x38    @ Check level of pins 32-57 (25:0), 31:26 reserved
